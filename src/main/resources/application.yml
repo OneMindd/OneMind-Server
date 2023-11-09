@@ -10,8 +10,8 @@ spring:
       client:
         registration:
           google:
-            client-id: 611816338810-5afi1r0edmu7ens9iecdpqr24mera56b.apps.googleusercontent.com
-            client-secret: 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
+            client-id: 611816338810-a1i3r7jtvp4tp794n11gbth90bgqojn5.apps.googleusercontent.com
+            client-secret: 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
         provider:
           google:
             token-info: https://oauth2.googleapis.com/tokeninfo
@@ -50,6 +50,7 @@ springdoc:
     disable-swagger-default-url: true
     display-request-duration: true
     tags-sorter: alpha
+
 server:
   port: 8080
   address: 192.168.0.22
