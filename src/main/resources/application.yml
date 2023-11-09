@@ -50,7 +50,9 @@ springdoc:
     disable-swagger-default-url: true
     display-request-duration: true
     tags-sorter: alpha
-
+server:
+  port: 8080
+  address: 192.168.0.22
 
 
 
