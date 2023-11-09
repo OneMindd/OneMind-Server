@@ -1,4 +1,4 @@
-package com.project.oneMind.domain.auth.dto.request;
+package com.project.oneMind.domain.auth.presentation.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;

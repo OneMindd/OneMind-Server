@@ -1,7 +1,7 @@
 package com.project.oneMind.domain.auth.service;
 
-import com.project.oneMind.domain.auth.dto.request.AuthenticationRequest;
-import com.project.oneMind.domain.auth.dto.response.JsonWebTokenResponse;
+import com.project.oneMind.domain.auth.presentation.dto.request.AuthenticationRequest;
+import com.project.oneMind.domain.auth.presentation.dto.response.JsonWebTokenResponse;
 import com.project.oneMind.domain.user.domain.UserEntity;
 import com.project.oneMind.domain.user.domain.enums.UserRole;
 import com.project.oneMind.domain.user.domain.repository.UserRepository;

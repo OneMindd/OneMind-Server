@@ -1,4 +1,4 @@
-package com.project.oneMind.domain.auth.dto.response;
+package com.project.oneMind.domain.auth.presentation.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;
