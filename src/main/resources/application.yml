@@ -15,6 +15,8 @@ spring:
           google:
             token-info: https://oauth2.googleapis.com/tokeninfo
 
+server:
+  port: 8090
 
   jpa:
     database: mysql
@@ -28,3 +30,18 @@ spring:
       ddl-auto: update
     show-sql: true
     defer-datasource-initialization: true
+
+application:
+  jwt:
+    secretKey: ZXlKaGJHY2lPaUpJVXpVeE1pSjkuZXlKU2IyeGxJam9pUVdSdGFXNGlMQ0pKYzNOMVpYSWlPaUpKYzNOMVpYSWlMQ0pWYzJWeWJtRnRaU0k2SWtwaGRtRkpibFZ6WlNJc0ltVjRjQ0k2TVRZNU9UVXpNelUzTnl3aWFXRjBJam94TmprNU5UTXpOVGMzZlEuUGRBWUxzbXpxUUR2OU5sb3NrMm5EY1lrNlVqMjE5ek9HRkhBYTN3NDh5ZlZ0OGQtZUVaV29iSy03R1htUE53bWNRcDJMZW1TY0lES244YXd5UnFsVXc=
+    expiration: 900000
+    refreshExpiration: 999999
+
+  cache:
+    type: redis
+
+  redis:
+    port: 6379
+    host: localhost
+
+
