@@ -42,8 +42,6 @@ public class SpotEntity extends BaseTimeEntity {
 
     private String introduce;
 
-    private String tips;
-
     @OneToMany(mappedBy = "ScheduleEntity", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, orphanRemoval = true)
     public List<ScheduleEntity> scheduleEntityList = new ArrayList<>();
 }
