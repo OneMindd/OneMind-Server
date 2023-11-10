@@ -1,7 +1,6 @@
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/oneMind?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
-    #url: jdbc:mysql://localhost:3306/oneMind?serverTimezone=UTC&characterEncoding=UTF-8
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: oneMind
     password: oneMind!@
@@ -53,7 +52,7 @@ springdoc:
     tags-sorter: alpha
 
 server:
-  port: 8080
+  port: 8090
   address: 192.168.0.22
 
 

@@ -18,7 +18,6 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.UnsupportedJwtException;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -32,8 +31,8 @@ import java.util.Date;
 public class JwtProvider {
 
     private final JwtProperties jwtProperties;
-    private final UserRepository userRepository;
     private final UserMapper userMapper;
+    private final UserRepository userRepository;
 
     public Jws<Claims> getClaims(final String token) {
         try {
@@ -76,8 +75,9 @@ public class JwtProvider {
             throw TokenTypeException.EXCEPTION;
         }
 
-        User user = userRepository.findByEmail(claims.getBody().getSubject()).map(userMapper::toUser).orElseThrow(() -> UserNotFoundException.EXCEPTION);
-
+        User user = userRepository.findByEmail(
+                claims.getBody().getSubject()).map(userMapper::toUser)
+                .orElseThrow(() -> UserNotFoundException.EXCEPTION);
 
         final CustomUserDetails details = new CustomUserDetails(user);
 
