@@ -7,4 +7,5 @@ import java.util.Optional;
 
 public interface ScheduleRepository extends JpaRepository<ScheduleEntity,Long> {
     Optional<ScheduleEntity> findByUserId(Long userId);
+    Optional<ScheduleEntity> findByTitle(String title);
 }
