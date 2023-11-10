@@ -1,6 +1,5 @@
 package com.project.oneMind.domain.schedule.presentation;
 
-import com.project.oneMind.domain.schedule.domain.repository.querydsl.ScheduleQueryRepository;
 import com.project.oneMind.domain.schedule.dto.Schedule;
 import com.project.oneMind.domain.schedule.dto.request.ScheduleRequest;
 import com.project.oneMind.domain.schedule.service.ScheduleService;
@@ -36,8 +35,8 @@ public class ScheduleController {
     }
 
     @GetMapping("")
-    public ResponseEntity<List<Schedule>> find(PageRequest request, ScheduleRequest scheduleRequest){
-        return ResponseEntity.status(HttpStatus.OK).body(scheduleQueryService.findSchedule(request,scheduleRequest.getUserId()));
+    public ResponseEntity<List<Schedule>> find(PageRequest request){
+        return ResponseEntity.status(HttpStatus.OK).body(scheduleQueryService.findSchedule(request));
     }
 
 }
