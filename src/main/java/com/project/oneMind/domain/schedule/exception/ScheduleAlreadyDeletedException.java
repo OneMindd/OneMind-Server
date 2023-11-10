@@ -6,5 +6,7 @@ import com.project.oneMind.global.exception.BusinessException;
 public class ScheduleAlreadyDeletedException extends BusinessException {
     public static final ScheduleAlreadyDeletedException EXCEPTION = new ScheduleAlreadyDeletedException();
 
-    private ScheduleAlreadyDeletedException(){super(ScheduleError.SCHEDULE_ALREADY_DELETED);}
+    private ScheduleAlreadyDeletedException(){
+        super(ScheduleError.SCHEDULE_ALREADY_DELETED);
+    }
 }

@@ -44,6 +44,8 @@ dependencies {
 	implementation 'org.apache.httpcomponents.client5:httpclient5:5.2.1'
 	implementation group: 'org.glassfish.web', name: 'jakarta.servlet.jsp.jstl', version: '2.0.0'
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.4'
+	implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.2.2'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.6.5'
 }
 
 tasks.named('test') {

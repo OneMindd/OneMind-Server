@@ -30,8 +30,8 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
     generate-ddl: true
-    hibernate:
-      ddl-auto: update
+#    hibernate:
+#      ddl-auto: none
     show-sql: true
     defer-datasource-initialization: true
 
