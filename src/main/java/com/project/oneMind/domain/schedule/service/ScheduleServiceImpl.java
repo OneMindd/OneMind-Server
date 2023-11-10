@@ -16,11 +16,11 @@ public class ScheduleServiceImpl implements ScheduleService{
     private final ScheduleMapper scheduleMapper;
 
     public void register(Schedule schedule){
-        if(repository.findByTitle(schedule.getTitle()).isPresent()) {
+        if(repository.findById(schedule.getId()).isPresent()) {
             throw ScheduleAlreadyExistsException.EXCEPTION;
         }
         repository.save(scheduleMapper.toCreate(schedule));
-    }
+    } // -> 이거 스케줄 dto 말고 다른걸로 해야할듯
 
     public void refuse(Long id){
         if(repository.findById(id).isEmpty()){

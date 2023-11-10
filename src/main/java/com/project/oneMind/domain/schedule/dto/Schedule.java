@@ -1,12 +1,11 @@
 package com.project.oneMind.domain.schedule.dto;
 
+import com.project.oneMind.domain.Spot.domain.SpotEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -16,7 +15,5 @@ import java.time.LocalDateTime;
 public class Schedule {
     private Long id;
     private Long userId;
-    private String title;
-    private String content;
-    private LocalDateTime arriveTime;
+    private SpotEntity spot;
 }

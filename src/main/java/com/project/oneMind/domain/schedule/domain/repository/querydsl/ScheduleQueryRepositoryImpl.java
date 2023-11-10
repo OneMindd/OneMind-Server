@@ -20,11 +20,10 @@ public class ScheduleQueryRepositoryImpl implements ScheduleQueryRepository{
     private final JPAQueryFactory queryFactory;
 
     @Override
-    public List<Schedule> findMySchedule(PageRequest request, Long userId) {
+    public List<Schedule> findMySchedule(PageRequest request) {
         return queryFactory
                 .select(scheduleProjection())
                 .from(scheduleEntity)
-                .where(equserId(userId))
                 .orderBy(scheduleEntity.id.desc())
                 .offset(request.getPageable().getOffset())
                 .limit(request.getPageable().getPageSize())

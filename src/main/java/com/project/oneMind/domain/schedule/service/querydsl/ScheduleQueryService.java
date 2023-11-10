@@ -6,5 +6,5 @@ import com.project.oneMind.global.dto.PageRequest;
 import java.util.List;
 
 public interface ScheduleQueryService {
-    List<Schedule> findSchedule(PageRequest request, Long userId);
+    List<Schedule> findSchedule(PageRequest request);
 }

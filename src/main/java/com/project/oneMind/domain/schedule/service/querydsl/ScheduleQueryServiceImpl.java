@@ -18,8 +18,8 @@ public class ScheduleQueryServiceImpl implements ScheduleQueryService{
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public List<Schedule> findSchedule(PageRequest request, Long userId){
-        return queryRepository.findMySchedule(request,userId);
+    public List<Schedule> findSchedule(PageRequest request){
+        return queryRepository.findMySchedule(request);
     }
 
 

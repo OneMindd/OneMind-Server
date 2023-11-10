@@ -4,15 +4,15 @@ import com.project.oneMind.domain.schedule.domain.ScheduleEntity;
 import com.project.oneMind.domain.schedule.dto.Schedule;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
+
 @Component
 public class ScheduleMapper {
     public Schedule toSchedule(ScheduleEntity entity){
         return Schedule.builder()
                 .id(entity.getId())
                 .userId(entity.getUserId())
-                .title(entity.getTitle())
-                .content(entity.getContent())
-                .arriveTime(entity.getArriveTime())
+                .spot(entity.getSpot())
                 .build();
     }
 
@@ -20,9 +20,8 @@ public class ScheduleMapper {
         return ScheduleEntity.builder()
                 .id(schedule.getId())
                 .userId(schedule.getUserId())
-                .content(schedule.getContent())
-                .title(schedule.getTitle())
-                .arriveTime(schedule.getArriveTime())
+                .spot(schedule.getSpot())
+                .createdDateTime(LocalDateTime.now())
                 .build();
     }
 }
